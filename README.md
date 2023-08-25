@@ -1,4 +1,4 @@
-# fano-simplices
-Classification of Fano simplices
+# Classification of Fano simplices
+
 
 Work in progress.
