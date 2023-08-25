@@ -27,7 +27,9 @@ to use all available threads, or type
 ```
 to restrict to a custom number of threads, in this case four.
 
-Let's say we want to classify the reflexive triangles. We start julia with four threads, include the fanosimp package and initialize the classification. Here is what the output looks like:
+Let's say we want to classify the reflexive triangles. We start julia with four threads, include the fanosimp package and initialize the classification. Here is what the output looks like.
+
+**WARNING: The procedure `fullclass_fanosimp` creates a folder `temp/` in the current working directory**.
 ```
 > julia --threads=4
 julia> include("fanosimp.jl");
@@ -46,7 +48,6 @@ Starting classification. This might take a while.
 Done.
 Found 5 Fano simplices of dimension 2 and Gorenstein index 1.
 ```
-**WARNING: The procedure `fullclass_fanosimp` creates a folder `temp/` in the current working directory**.
-In this folder there are now three text files, corresponding to the three weight systems, containing the reflexive triangles.
+In the folder `temp/` there are now three text files, corresponding to the three weight systems, containing the reflexive triangles.
 
 **A note on computation time:** As an example, on a midrange desktop computer, the classification of the 1561 four-dimensional reflexive simplices takes around 5 seconds.
