@@ -14,6 +14,7 @@ fanosimp uses the following packages:
 - `Combinatorics`
 - `Primes`
 - `AbstractAlgebra`
+
 These have to be installed before using fanosimp.
 
 Navigate to the folder that contains the file `fanosimp.jl` and start a Julia instance. The classification routine is multithreaded. To make use of this, start Julia with
