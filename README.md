@@ -26,3 +26,24 @@ to use all available threads, or
 > julia --threads=4
 ```
 to restrict to a custom number of threads, in this case four.
+
+Let's say we want to classify the reflexive triangles. We start julia with four threads, include the fanosimp package and initialize the classification. Here is what the output looks like:
+```
+> julia --threads=4
+julia> include("fanosimp.jl");
+julia> fullclass_fanosimp(2,1)
+Classification of Fano simplicies of dimension 2 and Gorenstein index 1.
+Using 4 threads.
+Computing list of weight systems...
+Done. List of 3 well-formed weight systems.
+Starting classification. This might take a while.
+[1, 1, 1] computing...
+[2, 1, 1] computing...
+[3, 2, 1] computing...
+[3, 2, 1] done. 1/3
+[2, 1, 1] done. 2/3
+[1, 1, 1] done. 3/3
+Done.
+Found 5 Fano simplices of dimension 2 and Gorenstein index 1.
+```
+**The procedure fullclass_fanosimp creates a folder `temp/` in the current working directory**. vIn this folder there are now three text files, corresponding to the three weight systems, containing the reflexive triangles.
