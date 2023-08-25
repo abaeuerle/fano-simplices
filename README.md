@@ -32,7 +32,7 @@ Let's say we want to classify the reflexive triangles. We start julia with four 
 > julia --threads=4
 julia> include("fanosimp.jl");
 julia> fullclass_fanosimp(2,1)
-Classification of Fano simplicies of dimension 2 and Gorenstein index 1.
+Classification of Fano simplices of dimension 2 and Gorenstein index 1.
 Using 4 threads.
 Computing list of weight systems...
 Done. List of 3 well-formed weight systems.
