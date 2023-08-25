@@ -4,8 +4,8 @@ A Julia package and a database for Fano simplices. For background information se
 
 ## Description
 The folders `fanosimp-d=2/` to `fanosimp-d=4/` contain text files, one per Gorenstein index.
-For instance the file `fanosimp-d=2-g=5.txt` contains the Fano simplices of dimension two and Gorenstein index five.
-Each line of one of these files is a simplex, presented as a list of vertices. For instance the entry `[[1, 0], [1, 2], [-6, -5]]`
+For instance, the file `fanosimp-d=2-g=5.txt` contains the Fano simplices of dimension two and Gorenstein index five.
+Each line of one of these files is a simplex, presented as a list of vertices. For instance, the entry `[[1, 0], [1, 2], [-6, -5]]`
 is the Fano triangle with vertices $(1,0)$, $(1,2)$ and $(-6,-5)$.
 
 ## How to use `fanosimp.jl`
@@ -50,4 +50,4 @@ Found 5 Fano simplices of dimension 2 and Gorenstein index 1.
 ```
 In the folder `temp/` there are now three text files, corresponding to the three weight systems, containing the reflexive triangles.
 
-**A note on computation time:** As an example, on a midrange desktop computer, the classification of the 1561 four-dimensional reflexive simplices takes around 5 seconds.
+**A note on computation time:** As an example, on a midrange desktop computer, using four threads, the classification of the 1561 four-dimensional reflexive simplices takes around 5-10 seconds.
