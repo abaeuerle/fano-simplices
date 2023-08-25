@@ -1,6 +1,6 @@
 # Classification of Fano simplices
 
-A julia package and a database for Fano simplices. For background information see [arXiv:2308.12719](https://arxiv.org/abs/2308.12719).
+A Julia package and a database for Fano simplices. For background information see [arXiv:2308.12719](https://arxiv.org/abs/2308.12719).
 
 ## Description
 The folders `fanosimp-d=2/` to `fanosimp-d=4/` contain text file, one per Gorenstein index.
