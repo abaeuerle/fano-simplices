@@ -21,7 +21,7 @@ Navigate to the folder that contains the file `fanosimp.jl` and start a Julia in
 ```
 > julia -t auto
 ```
-to use all available threads, or
+to use all available threads, or type
 ```
 > julia --threads=4
 ```
