@@ -46,4 +46,6 @@ Starting classification. This might take a while.
 Done.
 Found 5 Fano simplices of dimension 2 and Gorenstein index 1.
 ```
-**The procedure fullclass_fanosimp creates a folder `temp/` in the current working directory**. vIn this folder there are now three text files, corresponding to the three weight systems, containing the reflexive triangles.
+**The procedure `fullclass_fanosimp` creates a folder `temp/` in the current working directory**. In this folder there are now three text files, corresponding to the three weight systems, containing the reflexive triangles.
+
+**A note on computation time:** As an example, on a midrange desktop computer, the classification of the 1561 four-dimensional reflexive simplices takes around 5 seconds.
