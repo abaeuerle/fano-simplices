@@ -165,7 +165,7 @@ function gorform( pl::Vector{Vector{Int}}, w::Vector{Int}, i::Integer )::Vector{
     wZ = sum( w )
     ul = []
     for j = 1:n
-        append!( ul, j == i ? qval( pl, ul ) - wZ//( w[i] * pl[i][i] ) : qval( pl, ul ) )
+        append!( ul, j == i ? qval( pl, ul ) + wZ//( w[i] * pl[i][i] ) : qval( pl, ul ) )
     end
     return ul
 end
@@ -192,23 +192,23 @@ end
 function uval( pl::Vector{Vector{Int}}, w::Vector{Int}, i::Int, ul )
     n = length(ul)+1
     wZ = sum( w )
-    return n == i ? qval( pl, ul ) - wZ//( w[i] * pl[i][i] ) : qval( pl, ul )
+    return n == i ? qval( pl, ul ) + wZ//( w[i] * pl[i][i] ) : qval( pl, ul )
 end
 
 # qvcol does the same as qval, where cl is the n-th column of pl.
 function qvcol( cl::Vector{Int}, ql )
     n = length(ql)+1
     if n == 1
-        return 1//1
+        return - 1//1
     end
-    return (1 - sum( cl[j] * ql[j] for j = 1:n-1 ) )//cl[n]
+    return - (1 + sum( cl[j] * ql[j] for j = 1:n-1 ) )//cl[n]
 end
 
 # qvcol does the same as uval, where cl is the n-th column of pl.
 function uvcol( cl::Vector{Int}, w::Vector{Int}, i::Int, ul )
     n = length(ul)+1
     wZ = sum( w )
-    return n == i ? qvcol( cl, ul ) - wZ//( w[i] * cl[i] ) : qvcol( cl, ul )
+    return n == i ? qvcol( cl, ul ) + wZ//( w[i] * cl[i] ) : qvcol( cl, ul )
 end
 
 # isintegral( v ) checks whether the entries of the rational vector v are integers.
